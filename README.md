@@ -4,6 +4,8 @@ Self-Watering Tree circuit utilizing SparkFun soil moisture sensor to actuate a 
 
 ## Circuit Description
 
+![Picture1](https://github.com/user-attachments/assets/5d776dd5-a194-4e8c-9f9e-917e5e9de023)
+
 The circuit takes a 9 VDC input and steps down the voltages to 5 VDC using an LM7805 voltage regulator. The 0.22 µF and 0.1µF capacitors act as coupling capacitors, on the input and output voltage of the LM7805. This helps reduce the potential noise on the input and output as well as assist the LM7805 in regulating voltage if it is far from the power source. 
 
 The 5VDC output is then connected to a SPDT toggle switch, relay, and the two 2N3904 BJT Transistors in the circuit. The toggle switch is used to give power to either the Arduino Nano portion of the circuit (Autonomous Mode), or the soil moisture sensor (Standard Mode). This helps limit the current draw as the Arduino Nano will only be on during autonomous mode and decrease the overall current draw of the circuit as only one load will be active at a time.
